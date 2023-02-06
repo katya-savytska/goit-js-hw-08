@@ -32,7 +32,7 @@ function onFormSubmit(e){
 function fillInput(){
     const savedData = JSON.parse(localStorage.getItem(STORAGE_KEY));
     if(savedData){
-        refs.userEmailRef.value = savedData.formData.email;
+        refs.userEmailRef.value = savedData.email;
         refs.userMessageRef.value = savedData.formData.message;
         console.log(savedData.formData.message);
     }
