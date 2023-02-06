@@ -34,7 +34,7 @@ function fillInput(){
     if(savedData){
         refs.userEmailRef.value = savedData.email;
         refs.userMessageRef.value = savedData.formData.message;
-        console.log(savedData.formData.message);
+        console.log(savedData);
     }
 };
 
