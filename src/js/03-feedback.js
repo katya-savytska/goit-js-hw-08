@@ -30,12 +30,11 @@ function onFormSubmit(e){
 }
 
 function fillInput(){
-    const savedData = localStorage.getItem(STORAGE_KEY);
-    const parsedData = JSON.parse(savedData);
+    const savedData = JSON.parse(localStorage.getItem(STORAGE_KEY));
     if(savedData){
-        console.log(parsedData);
-        refs.userEmailRef.value = parsedData.email;
-        refs.userMessageRef.value = parsedData.message;
+        refs.userEmailRef.value = savedData.formData.email;
+        refs.userMessageRef.value = savedData.formData.message;
+        console.log(savedData.formData.message);
     }
 };
 
