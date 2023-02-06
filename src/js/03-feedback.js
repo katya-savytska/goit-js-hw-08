@@ -33,7 +33,7 @@ function fillInput(){
     const savedData = localStorage.getItem(STORAGE_KEY);
     const parsedData = JSON.parse(savedData);
     if(savedData){
-        console.log(parsedInfo);
+        console.log(parsedData);
         refs.userEmailRef.value = parsedData.email;
         refs.userMessageRef.value = parsedData.message;
     }
